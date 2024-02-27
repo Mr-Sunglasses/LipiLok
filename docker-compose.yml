@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: lipilok
+    image: spellcheck
     restart: always
     env_file:
     - .env

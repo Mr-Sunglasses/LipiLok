@@ -15,7 +15,7 @@ from .database import engine
 
 
 dictConfig(LogConfig())
-logger = logging.getLogger("lipilok")
+logger = logging.getLogger("spellcheck")
 
 origins = ["*"]
 
@@ -60,7 +60,7 @@ async def lifespan(app: FastAPI):
 
 
 def create_app() -> FastAPI:
-    app = FastAPI(title="lipilok", lifespan=lifespan)
+    app = FastAPI(title="spellcheck", lifespan=lifespan)
     configure_cors(app=app)
     Base.metadata.create_all(bind=engine)
     app.include_router(router=router)
@@ -68,5 +68,5 @@ def create_app() -> FastAPI:
     return app
 
 
-logger.info("Starting Lipilok")
+logger.info("Starting spellcheck")
 app = create_app()

@@ -1,7 +1,7 @@
 [project]
-name = "LipiLok"
+name = "Spellcheck"
 version = "0.1.0"
-description = "LipilLok: A tool that offers mastery over the world of writing"
+description = "Spellcheck: A tool that offers mastery over the world of writing"
 authors = [
     {name = "Kanishk Pachauri", email = "itskanishkp.py@gmail.com"},
 ]
@@ -26,7 +26,7 @@ license = {text = "MIT"}
 distribution = false
 
 [tool.pdm.scripts]
-start = "uvicorn src.lipilok.app:app --host 0.0.0.0 --port 8080"
-dev = "uvicorn src.lipilok.app:app --host 0.0.0.0 --port 8080 --reload"
+start = "uvicorn spellcheck.app:app --host 0.0.0.0 --port 8080"
+dev = "uvicorn spellcheck.app:app --host 0.0.0.0 --port 8080 --reload"
 download_model = "python3 language_models/download_models.py"
-format = "black src/lipilok"
+format = "black spellcheck"
