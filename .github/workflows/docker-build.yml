@@ -1,7 +1,7 @@
 name: Deploy Images to GHCR
 
 env:
-    MODEL="en"
+  MODEL="en"
 
 
 on:
