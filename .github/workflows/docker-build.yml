@@ -1,9 +1,5 @@
 name: Deploy Images to GHCR
 
-env:
-  MODEL="en"
-
-
 on:
   push:
     branches:
