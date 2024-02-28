@@ -21,6 +21,8 @@ origins = ["*"]
 
 current_file_directory = os.path.dirname(os.path.abspath(__file__))
 
+logger.info(current_file_directory)
+
 SELECTED_MODEL = get_settings().MODEL or "en_large"
 
 SELECTED_MODEL = (
@@ -30,15 +32,14 @@ SELECTED_MODEL = (
 )
 
 
-MODEL_PATH = os.path.abspath(
-    os.path.join(
-        current_file_directory, "..", "..", f"language_models/{SELECTED_MODEL}.pkl"
-    )
-)
+MODEL_PATH = os.path.abspath(os.path.join(
+    current_file_directory, "..", "..", f"language_models/{SELECTED_MODEL}.pkl"))
 
-MODEL_SAVE_DIR = os.path.abspath(
-    os.path.join(current_file_directory, "..", "..", "language_models")
-)
+
+MODEL_SAVE_DIR = os.path.abspath(os.path.join(
+    current_file_directory, "..", "..", "language_models"))
+
+logger.info(f"Model Path {MODEL_PATH}")
 
 
 def configure_cors(app: FastAPI) -> None:
