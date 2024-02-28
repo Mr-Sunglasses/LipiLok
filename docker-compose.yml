@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lipilok
+    restart: always
+    env_file:
+    - .env
+    ports:
+      - "8080:8080"
+    command: ["pdm", "run", "start"]
+    volumes:
+    - test-db-data:/project/spellcheck.db
+
+
+volumes:
+  test-db-data:
+    name: test-db-data
