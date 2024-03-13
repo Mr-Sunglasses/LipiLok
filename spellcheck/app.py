@@ -13,6 +13,7 @@ from .routers.endpoints import sp
 from .models import Base
 from .database import engine
 
+# this is a test
 
 dictConfig(LogConfig())
 logger = logging.getLogger("spellcheck")
